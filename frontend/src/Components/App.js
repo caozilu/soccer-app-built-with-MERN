@@ -40,14 +40,18 @@ class App extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col s12">Menu</div>
+          <nav>
+            <div className="nav-wrapper blue darken-1">
+              <a href="#" class="brand-logo">Soccer Management</a>
+            </div>
+          </nav>          
         </div>
         <div className="row">
           <div className="col s3">
             <PlayerList players={this.state.players} updateCurrentPlayer={this.state.updateCurrentPlayer} />
           </div>
           <div className="col s9">
-            <PlayerSingle />
+            <PlayerSingle player={this.state.currentPlayer} />
           </div>
         </div>
         <div className="row">
