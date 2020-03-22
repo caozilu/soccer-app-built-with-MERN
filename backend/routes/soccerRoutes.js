@@ -1,19 +1,24 @@
 import {
     addNewPlayer, 
     getPlayers, 
-    getPlayerWithID 
+    getPlayerWithID,
+    updatePlayer 
 } from '../controllers/playerControllers';
 
 const routes = (app) => {
     app.route('/players')
-    //Get endpoint
+    //GET endpoint
     .get(getPlayers)
 
     //POST endpoint
     .post(addNewPlayer);
 
     app.route('/player/:PlayerId')
-        .get(getPlayerWithID);
+    //Get specific player
+    .get(getPlayerWithID)
+
+    //Update specific player
+    .put(updatePlayer);
 }
 
 export default routes;
