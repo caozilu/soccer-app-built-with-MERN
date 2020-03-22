@@ -5,7 +5,7 @@ import PlayerList from './Player/PlayerList';
 import PlayerSingle from './Player/PlayerSingle';
 import PlayerForm from './Player/PlayerForm';
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
