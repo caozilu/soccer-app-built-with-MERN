@@ -2,7 +2,8 @@ import {
     addNewPlayer, 
     getPlayers, 
     getPlayerWithID,
-    updatePlayer 
+    updatePlayer,
+    deletePlayer 
 } from '../controllers/playerControllers';
 
 const routes = (app) => {
@@ -18,7 +19,10 @@ const routes = (app) => {
     .get(getPlayerWithID)
 
     //Update specific player
-    .put(updatePlayer);
+    .put(updatePlayer)
+    
+    //Delete specific player
+    .delete(deletePlayer);
 }
 
 export default routes;
